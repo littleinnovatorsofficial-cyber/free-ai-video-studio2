@@ -3,10 +3,10 @@ import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity
 import * as ImagePicker from "expo-image-picker";
 import * as Speech from "expo-speech";
 import { StatusBar } from "expo-status-bar";
-import { Character, Scene, Settings } from "./src/types";
-import { loadAll, saveCharacters, saveScenes, saveSettings } from "./src/storage";
-import { makeScenePrompt } from "./src/prompt";
-import { submitComfyJob } from "./src/comfy";
+import { Character, Scene, Settings } from "./types";
+import { loadAll, saveCharacters, saveScenes, saveSettings } from "./storage";
+import { makeScenePrompt } from "./prompt";
+import { submitComfyJob } from "./comfy";
 
 type Tab = "characters" | "scenes" | "voice" | "connect";
 const uid = () => `${Date.now()}-${Math.random().toString(36).slice(2,7)}`;
