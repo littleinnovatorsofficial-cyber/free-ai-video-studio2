@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Free AI Video Studio",
+    "slug": "free-ai-video-studio",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "android": {
+      "package": "studio.open.freeaivideo",
+      "permissions": ["READ_MEDIA_IMAGES", "RECORD_AUDIO"]
+    }
+  }
+}
