@@ -116,10 +116,10 @@ export default function App() {
         <Text style={styles.heading}>Open-source AI Connection</Text>
         <Text style={styles.help}>Connect to your own ComfyUI server or a temporary free GPU runtime. This app does not require a paid provider API key.</Text>
         <Card>
-          <Field label="ComfyUI server URL" value={settings.comfyUrl} onChangeText={v=>persistSettings({...settings,comfyUrl:v})} placeholder="http://192.168.1.10:8188"/>
-          <Field label="ComfyUI API workflow JSON" value={settings.workflowJson} onChangeText={v=>persistSettings({...settings,workflowJson:v})} placeholder="Paste API-format workflow JSON. Use {{PROMPT}} in a text input." multiline/>
-          <Field label="Positive prompt node ID (optional)" value={settings.positivePromptNode} onChangeText={v=>persistSettings({...settings,positivePromptNode:v})} placeholder="e.g. 6"/>
-          <Field label="Negative prompt node ID (optional)" value={settings.negativePromptNode} onChangeText={v=>persistSettings({...settings,negativePromptNode:v})} placeholder="e.g. 7"/>
+          <Field label="ComfyUI server URL" value={settings.comfyUrl} onChangeText={(v: string)=>persistSettings({...settings,comfyUrl:v})} placeholder="http://192.168.1.10:8188"/>
+          <Field label="ComfyUI API workflow JSON" value={settings.workflowJson} onChangeText={(v: string)=>persistSettings({...settings,workflowJson:v})} placeholder="Paste API-format workflow JSON. Use {{PROMPT}} in a text input." multiline/>
+          <Field label="Positive prompt node ID (optional)" value={settings.positivePromptNode} onChangeText={(v: string)=>persistSettings({...settings,positivePromptNode:v})} placeholder="e.g. 6"/>
+          <Field label="Negative prompt node ID (optional)" value={settings.negativePromptNode} onChangeText={(v: string)=>persistSettings({...settings,negativePromptNode:v})} placeholder="e.g. 7"/>
           <Btn title="Save connection settings" onPress={()=>{saveSettings(settings);Alert.alert("Saved","Settings saved on this phone.");}}/>
         </Card>
         <Card><Text style={styles.cardTitle}>Important setup notes</Text><Text style={styles.help}>• ComfyUI must be running and reachable from your phone.\n• For Android and remote hosts, use HTTPS where possible.\n• ComfyUI may need CORS enabled for your app origin, or a small same-network proxy.\n• Export workflow using ComfyUI's API format, not the normal UI workflow.\n• Each model workflow has different input nodes; set the correct node IDs.\n• Video models require large GPU memory. A free notebook/host may disconnect or impose usage limits.</Text></Card>
