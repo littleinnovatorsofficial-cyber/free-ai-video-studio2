@@ -7,5 +7,4 @@ export type Scene = {
 };
 export type Settings = {
   comfyUrl: string; workflowJson: string; positivePromptNode: string;
-  negativePromptNode: string; imageNode: string;
 };
